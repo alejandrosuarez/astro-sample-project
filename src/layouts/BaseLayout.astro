@@ -1,0 +1,21 @@
+---
+  import Header from '../components/Header.astro';
+  import '../styles/global.css';
+  const {pageTitle} = Astro.props;
+---  
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<title>{pageTitle}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://bejamas.io/fonts/recoleta/Recoleta-SemiBold--subset.woff2" as="font" type="font/woff2" crossorigin="">
+	</head>
+	<body>
+    <Header />
+    <slot />    
+	</body>
+</html>

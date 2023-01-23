@@ -1,0 +1,82 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+const { frontmatter } = Astro.props;
+---
+
+<style>
+  .container {
+    padding: 3rem 0;
+    max-width: 1152px;
+  }
+
+  .meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .date {
+    font-size: .875rem;
+    margin: 0;
+    text-transform: uppercase;
+    color: var(--color-text-2);
+  }
+
+  .title {
+    margin: 1rem 0;
+    font-size: 3.375rem;
+  }
+
+  .description {
+    max-width: 28.75rem;
+    margin: 1rem 0;
+    font-size: 1.25em;
+    color: var(--color-text-2);
+  }
+
+  .author {
+    font-size: .875rem;
+    margin: 0;
+    margin-bottom: 2.325rem;
+    color: var(--color-text);
+  }
+
+  .author-name {
+    font-weight: 700;
+  }
+
+  .poster {
+    display: block;
+    max-width: 445px;
+    width: 100%;
+    border-radius: 16px;
+  }
+
+  .body {
+    max-width: 42.5rem;
+    margin-inline: auto;
+    color: #3c4856;
+  }
+
+  .body :is(h1,h2,h3) {
+    color: var(--color-text);
+  }
+</style>
+
+<BaseLayout pageTitle={frontmatter.title}>
+  <div class="container">
+    <div class="meta">
+      <div>    
+        <time class="date">{frontmatter.pubDate.slice(0, 10)}</time>
+        <h1 class="title">{frontmatter.title}</h1>
+        <p class="description">{frontmatter.description}</p>
+        <span class="author">Author: <span class="author-name">{frontmatter.author}</span></span>
+      </div>
+      <img class="poster" src={frontmatter.image.url}  alt={frontmatter.image.alt} />
+    </div>  
+    <div class="body">
+      <slot />
+    </div>
+  </div>
+</BaseLayout>

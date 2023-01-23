@@ -1,0 +1,177 @@
+:root {
+  --color-primary: #da3654;
+  --color-text: #000;
+  --color-text-2: #3c4856c2;
+}
+
+@font-face {
+  font-family: "Recoleta";
+  src: url("https://bejamas.io/fonts/recoleta/Recoleta-SemiBold--subset.woff2") format("woff2");
+}
+
+body {
+  margin: 0;
+  font: 100%/1.55 "Poppins",sans-serif;
+  scroll-behavior: smooth;
+}
+
+:is(h1,h2,h3,h4) {
+  font-family: "Recoleta", "Poppins";
+}
+
+.container {
+  max-width: 1400px;
+  margin-inline: auto;
+}
+
+.section {
+  padding: 3rem 0;
+}
+
+.section-title {
+  margin-bottom: 3rem;
+  text-align: center;
+  font-size: 2.07474rem;
+  font-weight: bold;
+}
+
+.banner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.pretitle {
+  font-size: .875rem;
+  margin: 0;
+  margin-bottom: 2.325rem;
+  letter-spacing: .1875rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--color-text-2);
+}
+
+.title {
+  margin: 0;
+  font-size: 4.45rem;
+  line-height: 1.2;
+}
+
+mark {
+  background: linear-gradient(180deg,#feac0e,#da3654 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: #0000;
+  -webkit-box-decoration-break: clone;
+  background-image: linear-gradient(90deg,#f931c6 0,#dd6c68); 
+}
+
+.text {
+  max-width: 28.75rem;
+  margin-bottom: 2.325rem;
+  margin-top: 2.325rem;
+  font-size: 1.25em;
+  color: var(--color-text-2);
+}
+
+.button {
+  border-radius: 28px;
+  background-color: #da3654;
+  background: linear-gradient(90deg,#da3654 0,#eb5295);
+  color: #fff;
+  padding: .8611rem 1.55rem 1.0333rem;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  min-width: 9rem;
+  display: inline-block;
+  text-align: center;
+  border: 0;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.banner img {
+  display: block;
+  max-width: 670px;
+  width: 100%;
+}
+
+.blog-section {
+  background-color: #f5f9fb;
+}
+
+.case-studies {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem 2rem;
+}
+
+.casestudy {
+  display: flex;
+  gap: 2rem;
+}
+
+.casestudy h3 {
+  margin: 0;
+  font-size: 1.62671rem;
+  color: var(--color-text);
+}
+
+.casestudy img {
+  border-radius: 8px;
+  height: 280px;
+}
+
+.casestudy p {
+  color: var(--color-text-2);
+}
+
+.casestudy a {
+  color: var(--color-primary);
+  text-decoration: none;  
+}
+
+.blogs {
+  display: grid;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;  
+}
+
+.blog {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.blog h3 {
+  margin: 0;
+  font-size: 1.62671rem;
+  color: var(--color-text);
+}
+
+.blog img {
+  border-radius: 8px;
+  width: 100%;
+}
+
+.blog p {
+  margin: 0;
+  color: var(--color-text-2);
+}
+
+.blog a {
+  color: var(--color-primary);
+  text-decoration: none;  
+}
+
+.faq-container {
+
+}
